@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Phuket, Thailand</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 100px;
+            color: #ff4081;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .destination {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            padding: 20px 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .destination h2 {
+            margin: 0 0 10px;
+            color: #c2185b;
+        }
+
+        .btn {
+            background-color: #c2185b;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .description {
+            display: none;
+            margin-top: 15px;
+            background: #f8bbd0;
+            padding: 15px;
+            border-radius: 8px;
+            color: #333;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+                padding-top: 40px;
+            }
+
+            .destination {
+                max-width: 95vw;
+                padding: 12px 8px;
+                margin: 16px auto;
+            }
+
+            .btn {
+                font-size: 0.85rem;
+                padding: 7px 12px;
+            }
+
+            .description {
+                font-size: 0.98rem;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+                padding-top: 20px;
+            }
+            .destination {
+                max-width: 100vw;
+                padding: 8px 2vw;
+                margin: 10px 0;
+            }
+            .btn {
+                font-size: 0.8rem;
+                padding: 6px 10px;
+            }
+            .description {
+                font-size: 0.95rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌴 Explore Phuket, Thailand</h1>
+
+    <div class="destination">
+        <h2>Patong Beach</h2>
+        <button class="btn" onclick="toggleDesc('patong')">More Info</button>
+        <div class="description" id="patong">
+            Patong Beach is Phuket's most famous beach, known for its vibrant nightlife and lively atmosphere. Visitors can enjoy water sports during the day and explore the bustling streets at night.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Phi Phi Islands</h2>
+        <button class="btn" onclick="toggleDesc('phi')">More Info</button>
+        <div class="description" id="phi">
+            The Phi Phi Islands are renowned for their crystal-clear waters, stunning cliffs, and sandy beaches. It's a perfect destination for snorkeling, diving, and island-hopping.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Big Buddha</h2>
+        <button class="btn" onclick="toggleDesc('buddha')">More Info</button>
+        <div class="description" id="buddha">
+            The Big Buddha is one of the most iconic landmarks in Phuket. Standing at 45 meters tall, it offers a panoramic view of the island. It's a peaceful place for reflection and sightseeing.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Old Phuket Town</h2>
+        <button class="btn" onclick="toggleDesc('oldphuket')">More Info</button>
+        <div class="description" id="oldphuket">
+            Old Phuket Town is known for its vibrant Sino-Portuguese architecture. The area is filled with colorful buildings, quaint cafes, and charming shops, giving a glimpse into Phuket's rich history.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Phang Nga Bay</h2>
+        <button class="btn" onclick="toggleDesc('phangnga')">More Info</button>
+        <div class="description" id="phangnga">
+            Phang Nga Bay is famous for its limestone karsts and emerald-green waters. Visitors can explore the bay by kayak, visit James Bond Island, and take in the stunning landscape.
+        </div>
+    </div>
+
+    <script>
+        function toggleDesc(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>

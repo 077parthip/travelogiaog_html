@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Banff</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 40px;
+      color: #1b2631;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 5px rgba(255,255,255,0.9);
+    }
+
+    .destination {
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px auto;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .destination h2 {
+      margin: 0 0 10px;
+      color: #1565c0;
+    }
+
+    .btn {
+      background-color: #0d47a1;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .description {
+      display: none;
+      margin-top: 15px;
+      background: #bbdefb;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏔️ Discover Banff, Canada</h1>
+
+  <div class="destination">
+    <h2>Lake Louise</h2>
+    <button class="btn" onclick="toggleDesc('louise')">More Info</button>
+    <div class="description" id="louise">
+      Lake Louise is world-famous for its turquoise waters surrounded by snowy peaks. In winter, it becomes a frozen wonderland perfect for ice skating and snowy hikes.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Banff Gondola</h2>
+    <button class="btn" onclick="toggleDesc('gondola')">More Info</button>
+    <div class="description" id="gondola">
+      Take the Banff Gondola up Sulphur Mountain to enjoy panoramic views of the snow-covered Canadian Rockies. At the summit, explore boardwalks and a modern interpretive center.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Johnston Canyon</h2>
+    <button class="btn" onclick="toggleDesc('canyon')">More Info</button>
+    <div class="description" id="canyon">
+      In winter, Johnston Canyon becomes a magical trail with frozen waterfalls and icy paths. Perfect for a guided ice walk adventure through the snowy forest.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Banff Upper Hot Springs</h2>
+    <button class="btn" onclick="toggleDesc('hotsprings')">More Info</button>
+    <div class="description" id="hotsprings">
+      Relax in warm mineral-rich waters while surrounded by snowy landscapes. The Banff Upper Hot Springs are a perfect way to unwind after a day in the cold.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Downtown Banff</h2>
+    <button class="btn" onclick="toggleDesc('downtown')">More Info</button>
+    <div class="description" id="downtown">
+      Downtown Banff is full of charming shops, cafes, and alpine-style restaurants. The snow-covered streets are beautifully lit during the winter months, creating a cozy village feel.
+    </div>
+  </div>
+
+  <script>
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

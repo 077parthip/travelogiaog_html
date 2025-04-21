@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travelogia – Monsoon Destinations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7fafc;
+      color: #222;
+    }
+
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 18px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #3182ce;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #2b6cb0;
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 16px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      color: #2b6cb0;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    h3 {
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: 40px;
+      font-size: 20px;
+      color: #4a5568;
+    }
+
+    .destinations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+    }
+
+    .destination-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(44,62,80,0.08);
+      overflow: hidden;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+    }
+    .destination-card:hover {
+      box-shadow: 0 6px 24px rgba(44,62,80,0.16);
+    }
+    .destination-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .destination-card-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .destination-card h2 {
+      font-size: 22px;
+      margin: 0 0 10px 0;
+      color: #2b6cb0;
+      font-weight: 600;
+    }
+    .destination-card h2 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .destination-card h2 a:hover {
+      text-decoration: underline;
+    }
+    .destination-card p {
+      font-size: 16px;
+      color: #444;
+      flex: 1;
+    }
+
+    @media (max-width: 900px) {
+      .destinations {
+        gap: 20px;
+      }
+      .destination-card {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 18px 4px;
+      }
+      h1 { font-size: 28px; }
+      h3 { font-size: 15px; }
+      .destinations {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+      }
+      .destination-card {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="2.html">Home</a>
+    <a href="mon.html">Monsoon</a>
+    <a href="sum.html">Summer</a>
+    <a href="win.html">Winter</a>
+  </nav>
+  <div class="container">
+    <h1>🌧️ Monsoon Destinations</h1>
+    <h3>Feel the magic of rain with these stunning monsoon travel escapes</h3>
+    <div class="destinations">
+      <div class="destination-card">
+        <img src="coorg.jpg" alt="Coorg">
+        <div class="destination-card-content">
+          <h2><a href="coorg.html">🌲 Coorg, India</a></h2>
+          <p>Coorg is a peaceful hill station in Karnataka, filled with coffee plantations, mist-covered hills, and waterfalls that become even more mesmerizing during the monsoon season.</p>
+        </div>
+      </div>
+      <div class="destination-card">
+        <img src="munnar.jpg" alt="Munnar">
+        <div class="destination-card-content">
+          <h2><a href="munnar.html">🌧️ Munnar, India</a></h2>
+          <p>Munnar’s rolling tea plantations and mountain peaks become dreamy and cool with gentle showers. It’s a perfect retreat for rain lovers and nature photographers.</p>
+        </div>
+      </div>
+      <div class="destination-card">
+        <img src="keralaback.jpg" alt="Kerala Backwaters">
+        <div class="destination-card-content">
+          <h2><a href="keralaback.html">🌿 Kerala Backwaters</a></h2>
+          <p>Kerala’s backwaters and lush green fields flourish in monsoon. A houseboat cruise through the rain-soaked canals is a once-in-a-lifetime experience.</p>
+        </div>
+      </div>
+      <div class="destination-card">
+        <img src="cherrapunji.jpg" alt="Cherrapunji">
+        <div class="destination-card-content">
+          <h2><a href="cherapunji.html">🌧️ Cherrapunji, Meghalaya</a></h2>
+          <p>One of the wettest places on Earth, Cherrapunji is a rain-lover’s paradise with living root bridges, waterfalls, and mist-filled valleys.</p>
+        </div>
+      </div>
+      <div class="destination-card">
+        <img src="Bali.jpg" alt="Bali">
+        <div class="destination-card-content">
+          <h2><a href="bali.html">🌧️ Bali, Indonesia</a></h2>
+          <p>Rain refreshes Bali’s rice paddies and forests, adding serenity to temples and beaches. It’s ideal for those who enjoy a calm, romantic escape during the off-season.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

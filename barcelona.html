@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Barcelona</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #1cf352;
+            width: 100vw;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 100px;
+            color: #ff4081;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .destination {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            padding: 20px 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            color: #3e2723;
+            box-sizing: border-box;
+        }
+
+        .destination h2 {
+            margin: 0 0 10px;
+            color: #c2185b;
+        }
+
+        .btn {
+            background-color: #c2185b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 200px;
+            display: block;
+        }
+
+        .description {
+            display: none;
+            margin-top: 15px;
+            background: #f8bbd0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .destination {
+                max-width: 100%;
+                width: 100%;
+                padding: 15px;
+                margin: 16px 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+                padding-top: 40px;
+            }
+
+            .btn {
+                font-size: 0.95rem;
+                padding: 10px 0;
+                margin-top: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌞 Explore the Beauty of Barcelona</h1>
+
+    <div class="destination">
+        <h2>La Sagrada Familia</h2>
+        <button class="btn" onclick="toggleDesc('sagrada')">More Info</button>
+        <div class="description" id="sagrada">
+            La Sagrada Familia is Antoni Gaudí’s unfinished masterpiece, a breathtaking basilica with unique architectural details and an awe-inspiring interior. It's one of the most iconic landmarks in Barcelona.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Park Güell</h2>
+        <button class="btn" onclick="toggleDesc('parkguell')">More Info</button>
+        <div class="description" id="parkguell">
+            Park Güell is a public park designed by Antoni Gaudí, offering a unique blend of nature, art, and architecture. Visitors can enjoy its colorful mosaics, winding paths, and panoramic views of the city.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Gothic Quarter</h2>
+        <button class="btn" onclick="toggleDesc('gothic')">More Info</button>
+        <div class="description" id="gothic">
+            The Gothic Quarter is a maze of narrow medieval streets filled with history, charming cafes, and boutique shops. Key landmarks include the Barcelona Cathedral and Plaça del Rei.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>La Rambla</h2>
+        <button class="btn" onclick="toggleDesc('rambla')">More Info</button>
+        <div class="description" id="rambla">
+            La Rambla is a bustling pedestrian street in the heart of Barcelona, famous for its street performers, open-air markets, and lively atmosphere. It's a great place to stroll and soak in the local vibe.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Montjuïc Hill</h2>
+        <button class="btn" onclick="toggleDesc('montjuic')">More Info</button>
+        <div class="description" id="montjuic">
+            Montjuïc Hill offers spectacular views of the city and the Mediterranean Sea. Visitors can explore the Montjuïc Castle, Magic Fountain, and several museums and gardens.
+        </div>
+    </div>
+
+    <script>
+        function toggleDesc(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>

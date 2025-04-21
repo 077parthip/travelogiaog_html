@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Maldives</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 100px;
+            color: #ff4081;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .destination {
+            background: rgba(255, 255, 255, 0.85);
+            margin: 20px auto;
+            padding: 24px 20px;
+            border-radius: 12px;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .destination h2 {
+            margin: 0 0 10px;
+            color: #c2185b;
+            font-size: 1.4rem;
+        }
+
+        .btn {
+            background-color: #c2185b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 220px;
+            display: block;
+        }
+
+        .description {
+            display: none;
+            margin-top: 15px;
+            background: #f8bbd0;
+            color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .destination {
+                max-width: 100%;
+                padding: 14px 8px;
+            }
+
+            h1 {
+                font-size: 2rem;
+                padding-top: 40px;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 14px 0;
+                margin-top: 12px;
+            }
+
+            .description {
+                font-size: 0.98rem;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+                padding-top: 24px;
+            }
+            .destination h2 {
+                font-size: 1.1rem;
+            }
+            .btn {
+                font-size: 0.95rem;
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🏝️ Explore Maldives</h1>
+
+    <div class="destination">
+        <h2>Malé</h2>
+        <button class="btn" onclick="toggleDesc('male')">More Info</button>
+        <div class="description" id="male">
+            Malé, the capital of the Maldives, is a bustling city with colorful markets, historical mosques, and lively streets. It’s an exciting blend of tradition and modernity.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Banana Reef</h2>
+        <button class="btn" onclick="toggleDesc('banana')">More Info</button>
+        <div class="description" id="banana">
+            Banana Reef is one of the most famous dive sites in the Maldives. Known for its rich marine life, it is ideal for snorkeling and diving, with vibrant coral and exotic fish.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Maafushi Island</h2>
+        <button class="btn" onclick="toggleDesc('maafushi')">More Info</button>
+        <div class="description" id="maafushi"></div>
+            Maafushi is a picturesque local island where visitors can enjoy white sandy beaches, crystal-clear waters, and a laid-back atmosphere. It's perfect for those looking for a peaceful retreat.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Sun Island</h2>
+        <button class="btn" onclick="toggleDesc('sunisland')">More Info</button>
+        <div class="description" id="sunisland">
+            Sun Island is a luxury resort known for its overwater villas, clear lagoons, and extensive water sports options. It's perfect for those seeking relaxation and indulgence.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Dhigurah Island</h2>
+        <button class="btn" onclick="toggleDesc('dhigurah')">More Info</button>
+        <div class="description" id="dhigurah">
+            Dhigurah is a small, beautiful island famous for its serene beaches and vibrant coral reefs. It’s a fantastic destination for beach lovers and snorkeling enthusiasts.
+        </div>
+    </div>
+
+    <script>
+        function toggleDesc(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html></div>

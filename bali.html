@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Bali, Indonesia</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            /* Set the background image */
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+            background-size: cover; /* Ensure the image covers the entire page */
+            margin: 0;
+            padding: 0;
+            color: #fff; /* White text for contrast */
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 100px;
+            color: #ff4081;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .destination {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            padding: 20px 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .destination h2 {
+            margin: 0 0 10px;
+            color: #c2185b;
+        }
+
+        .btn {
+            background-color: #c2185b;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .description {
+            display: none;
+            margin-top: 15px;
+            background: #f8bbd0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .destination {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌴 Explore Bali, Indonesia</h1>
+
+    <div class="destination">
+        <h2>Uluwatu Temple</h2>
+        <button class="btn" onclick="toggleDesc('uluwatu')">More Info</button>
+        <div class="description" id="uluwatu">
+            Uluwatu Temple is a stunning sea temple perched on a high cliff. The temple is famous for its spectacular sunset views and its location overlooking the Indian Ocean.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Sacred Monkey Forest Sanctuary</h2>
+        <button class="btn" onclick="toggleDesc('monkeyforest')">More Info</button>
+        <div class="description" id="monkeyforest">
+            The Sacred Monkey Forest Sanctuary is a lush, green forest in Ubud where visitors can walk among playful long-tailed macaques. It's a spiritual and natural haven.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Tegallalang Rice Terraces</h2>
+        <button class="btn" onclick="toggleDesc('tegallalang')">More Info</button>
+        <div class="description" id="tegallalang">
+            The Tegallalang Rice Terraces offer breathtaking views of the lush, green landscape, where you can learn about the ancient method of rice farming still in practice.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Besakih Temple</h2>
+        <button class="btn" onclick="toggleDesc('besakih')">More Info</button>
+        <div class="description" id="besakih">
+            Besakih Temple is Bali's largest and holiest temple, located on the slopes of Mount Agung. It’s an important religious site and offers panoramic views of the island.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Seminyak Beach</h2>
+        <button class="btn" onclick="toggleDesc('seminyak')">More Info</button>
+        <div class="description" id="seminyak">
+            Seminyak Beach is known for its upscale resorts, vibrant beach clubs, and lively nightlife. It’s perfect for both relaxation and excitement by the ocean.
+        </div>
+    </div>
+
+    <script>
+        function toggleDesc(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>

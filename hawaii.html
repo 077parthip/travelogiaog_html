@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Explore Hawaii, USA</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+        }
+        /* Overlay for readability */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.35);
+            z-index: 0;
+        }
+        main, h1, .destination {
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+            padding-top: 100px;
+            color: #ff4081;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .destination {
+            background: rgba(255, 255, 255, 0.85);
+            margin: 20px auto;
+            padding: 20px 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .destination h2 {
+            margin: 0 0 10px;
+            color: #c2185b;
+        }
+        .btn {
+            background-color: #c2185b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+            min-width: 120px;
+        }
+        .description {
+            display: none;
+            margin-top: 15px;
+            background: #f8bbd0;
+            color: #222;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                padding-top: 40px;
+            }
+            .destination {
+                max-width: 100%;
+                padding: 12px 8px;
+                margin: 16px 0;
+            }
+            .btn {
+                font-size: 1rem;
+                padding: 10px 16px;
+                min-width: 100px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+                padding-top: 24px;
+            }
+            .destination {
+                padding: 8px 4px;
+            }
+            .btn {
+                font-size: 0.95rem;
+                padding: 8px 10px;
+                min-width: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🌺 Explore Hawaii, USA</h1>
+    <main>
+        <div class="destination">
+            <h2>Waikiki Beach</h2>
+            <button class="btn" onclick="toggleDesc('waikiki')">More Info</button>
+            <div class="description" id="waikiki">
+                Waikiki Beach is one of the most famous beaches in the world. It offers stunning views of the Pacific Ocean and is a hub for water activities such as surfing and snorkeling.
+            </div>
+        </div>
+        <div class="destination">
+            <h2>Diamond Head</h2>
+            <button class="btn" onclick="toggleDesc('diamondhead')">More Info</button>
+            <div class="description" id="diamondhead">
+                Diamond Head is a volcanic crater and a famous hiking destination. The summit offers breathtaking panoramic views of Honolulu and the surrounding coastline.
+            </div>
+        </div>
+        <div class="destination">
+            <h2>Haleakalā National Park</h2>
+            <button class="btn" onclick="toggleDesc('haleakala')">More Info</button>
+            <div class="description" id="haleakala">
+                Haleakalā National Park is home to the largest dormant volcano in the world. Visitors can enjoy sunrise views from the summit and explore the diverse landscapes of the park.
+            </div>
+        </div>
+        <div class="destination">
+            <h2>Napali Coast</h2>
+            <button class="btn" onclick="toggleDesc('napali')">More Info</button>
+            <div class="description" id="napali">
+                The Napali Coast is known for its rugged cliffs, waterfalls, and pristine beaches. It is accessible by boat, helicopter, or a challenging hike through the lush landscape.
+            </div>
+        </div>
+        <div class="destination">
+            <h2>Volcanoes National Park</h2>
+            <button class="btn" onclick="toggleDesc('volcanoes')">More Info</button>
+            <div class="description" id="volcanoes">
+                Volcanoes National Park is home to the famous Kīlauea volcano. Visitors can witness active volcanic activity, explore lava tubes, and hike through diverse terrains.
+            </div>
+        </div>
+    </main>
+    <script>
+        function toggleDesc(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Hallstatt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 40px;
+      color: #f0f4f8;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    .destination {
+      background: rgba(0, 0, 0, 0.6);
+      margin: 20px auto;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .destination h2 {
+      margin: 0 0 10px;
+      color: #bbdefb;
+    }
+
+    .btn {
+      background-color: #64b5f6;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .description {
+      display: none;
+      margin-top: 15px;
+      background: #1e3a5f;
+      padding: 15px;
+      border-radius: 8px;
+      color: #e0f2f1;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 1.5rem;
+        padding: 10px 0;
+      }
+      .destination {
+        padding: 14px 8px;
+        max-width: 100%;
+        margin: 14px 0;
+      }
+      .btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px 0;
+      }
+      .description {
+        font-size: 0.98rem;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏔️ Explore Hallstatt, Austria</h1>
+
+  <div class="destination">
+    <h2>Old Town of Hallstatt</h2>
+    <button class="btn" onclick="toggleDesc('oldtown')">More Info</button>
+    <div class="description" id="oldtown">
+      Hallstatt’s Old Town is a UNESCO World Heritage Site, known for its charming lakeside houses, historic church spires, and snow-covered rooftops during winter, all surrounded by majestic alpine scenery.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Hallstatt Skywalk</h2>
+    <button class="btn" onclick="toggleDesc('skywalk')">More Info</button>
+    <div class="description" id="skywalk">
+      The Skywalk viewing platform, 350 meters above Hallstatt, offers breathtaking panoramic views of the Dachstein Alps and Hallstätter See. A winter must-see for photographers and nature lovers.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Salt Mine Tour</h2>
+    <button class="btn" onclick="toggleDesc('saltmine')">More Info</button>
+    <div class="description" id="saltmine">
+      Take a guided tour through one of the world’s oldest salt mines, complete with underground slides and light installations. Learn how Hallstatt's history is shaped by "white gold."
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Lake Hallstatt</h2>
+    <button class="btn" onclick="toggleDesc('lake')">More Info</button>
+    <div class="description" id="lake">
+      Surrounded by snow-capped peaks, Lake Hallstatt becomes a magical, reflective mirror in winter. Visitors can enjoy peaceful walks, boat rides, and scenic views along its frozen shoreline.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Dachstein Ice Cave</h2>
+    <button class="btn" onclick="toggleDesc('icecave')">More Info</button>
+    <div class="description" id="icecave">
+      Just a short ride away, the Dachstein Ice Caves offer a dazzling underground world of frozen formations, ice palaces, and glacial history — illuminated for a surreal winter experience.
+    </div>
+  </div>
+
+  <script>
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

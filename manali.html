@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Manali</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 40px;
+      color: #1c313a;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 5px rgba(255,255,255,0.9);
+    }
+
+    .destination {
+      background: rgba(255, 255, 255, 0.92);
+      margin: 20px auto;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .destination h2 {
+      margin: 0 0 10px;
+      color: #1565c0;
+    }
+
+    .btn {
+      background-color: #0d47a1;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .description {
+      display: none;
+      margin-top: 15px;
+      background: #bbdefb;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 2rem;
+        padding: 10px 0;
+      }
+      .destination {
+        padding: 15px 8px;
+        max-width: 98vw;
+      }
+      .btn {
+        width: 100%;
+        font-size: 1rem;
+      }
+      .description {
+        font-size: 0.98rem;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>❄️ Discover Manali, Himachal Pradesh</h1>
+
+  <div class="destination">
+    <h2>Solang Valley</h2>
+    <button class="btn" onclick="toggleDesc('solang')">More Info</button>
+    <div class="description" id="solang">
+      Solang Valley is a winter wonderland popular for skiing, snowboarding, and snowmobiling. The snow-covered slopes and majestic views make it a favorite for adventure lovers.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Rohtang Pass</h2>
+    <button class="btn" onclick="toggleDesc('rohtang')">More Info</button>
+    <div class="description" id="rohtang">
+      Rohtang Pass offers a breathtaking view of glaciers, peaks, and valleys. It’s often covered in snow in winter and is a hotspot for snow sports and scenic drives.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Old Manali</h2>
+    <button class="btn" onclick="toggleDesc('oldmanali')">More Info</button>
+    <div class="description" id="oldmanali">
+      Old Manali is known for its peaceful ambiance, rustic cafes, and scenic beauty. Stroll through its snowy paths and experience the charm of Himalayan culture.
+    </div>
+  </div>
+  <div class="destination">
+    <h2>Hadimba Temple</h2>
+    <button class="btn" onclick="toggleDesc('hadimba')">More Info</button>
+    <div class="description" id="hadimba">
+      Surrounded by cedar forests, Hadimba Temple is a historic wooden shrine dedicated to Goddess Hadimba. It looks magical when blanketed in snow during the winter.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Manu Temple</h2>
+    <button class="btn" onclick="toggleDesc('manu')">More Info</button>
+    <div class="description" id="manu">
+      Dedicated to Sage Manu, this temple is a spiritual and peaceful site with a backdrop of snow-covered mountains and pine trees, perfect for winter visits.
+    </div>
+  </div>
+
+  <script>
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html></div>

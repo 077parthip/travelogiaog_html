@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Santorini, Greece</title>
+    <style>
+        html, body {
+            width: 100vw;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 100px;
+            color: #ff4081;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .destination {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            padding: 20px 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .destination h2 {
+            margin: 0 0 10px;
+            color: #c2185b;
+        }
+
+        .btn {
+            background-color: #c2185b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .description {
+            display: none;
+            margin-top: 15px;
+            background: #f8bbd0;
+            padding: 15px;
+            border-radius: 8px;
+            color: #333;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .destination {
+                max-width: 100%;
+                padding: 12px;
+                margin: 12px 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+                padding-top: 40px;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+                padding-top: 20px;
+            }
+            .destination {
+                padding: 8px;
+            }
+            .btn {
+                font-size: 0.95rem;
+                padding: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌞 Explore Santorini, Greece</h1>
+
+    <div class="destination">
+        <h2>Oia Village</h2>
+        <button class="btn" onclick="toggleDesc('oia')">More Info</button>
+        <div class="description" id="oia">
+            Oia is famous for its whitewashed buildings, blue-domed churches, and breathtaking sunset views. It's one of the most photographed places in Santorini.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Fira Town</h2>
+        <button class="btn" onclick="toggleDesc('fira')">More Info</button>
+        <div class="description" id="fira">
+            Fira is the bustling capital of Santorini. It's filled with charming shops, restaurants, and bars, offering spectacular views of the caldera and Aegean Sea.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Akrotiri Archaeological Site</h2>
+        <button class="btn" onclick="toggleDesc('akrotiri')">More Info</button>
+        <div class="description" id="akrotiri">
+            Akrotiri is an ancient Minoan city destroyed by a volcanic eruption around 1600 BC. It's a fascinating archaeological site with well-preserved ruins, frescoes, and artifacts.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Red Beach</h2>
+        <button class="btn" onclick="toggleDesc('redbeach')">More Info</button>
+        <div class="description" id="redbeach">
+            Red Beach is one of the most iconic beaches in Santorini, known for its dramatic red volcanic cliffs. It's perfect for relaxing, swimming, and enjoying the unique landscape.
+        </div>
+    </div>
+
+    <div class="destination">
+        <h2>Amoudi Bay</h2>
+        <button class="btn" onclick="toggleDesc('amoudi')">More Info</button>
+        <div class="description" id="amoudi">
+            Amoudi Bay is a picturesque fishing village located below Oia. It's an ideal spot for fresh seafood dining with views of the stunning caldera.
+        </div>
+    </div>
+
+    <script>
+        function toggleDesc(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html></div>

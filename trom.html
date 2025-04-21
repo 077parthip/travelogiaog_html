@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Tromsø</title>
+  <meta name="""viewport" content="""width=device-width, initial-scale=""1" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 40px;
+      color: #e0f7fa;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .destination {
+      background: rgba(0, 0, 0, 0.7);
+      margin: 20px auto;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .destination h2 {
+      margin: 0 0 10px;
+      color: #80deea;
+    }
+
+    .btn {
+      background-color: #728284;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .description {
+      display: none;
+      margin-top: 15px;
+      background: #004d40;
+      padding: 15px;
+      border-radius: 8px;
+      color: #e0f2f1;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 2rem;
+        padding: 0 5px;
+      }
+      .destination {
+        padding: 14px 8px;
+        max-width: 98vw;
+      }
+      .btn {
+        width: 100%;
+        font-size: 1rem;
+      }
+      .description {
+        font-size: 0.98rem;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌌 Discover Tromsø, Norway</h1>
+
+  <div class="destination">
+    <h2>Northern Lights Viewing</h2>
+    <button class="btn" onclick="toggleDesc('aurora')">More Info</button>
+    <div class="description" id="aurora">
+      Tromsø is one of the best places in the world to see the Northern Lights, especially during the long polar nights. Guided tours are available for the best views away from city lights.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Arctic Cathedral</h2>
+    <button class="btn" onclick="toggleDesc('cathedral')">More Info</button>
+    <div class="description" id="cathedral">
+      The Arctic Cathedral is a modern architectural icon inspired by icebergs and Northern landscapes. It hosts special winter concerts and glows beautifully when lit up at night.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Fjellheisen Cable Car</h2>
+    <button class="btn" onclick="toggleDesc('cablecar')">More Info</button>
+    <div class="description" id="cablecar">
+      Ride the Fjellheisen cable car to the top of Mount Storsteinen for panoramic winter views of Tromsø and the fjords, especially magical during twilight and aurora season.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Polar Museum</h2>
+    <button class="btn" onclick="toggleDesc('museum')">More Info</button>
+    <div class="description" id="museum">
+      Learn about Tromsø’s rich history as a center for Arctic expeditions. The Polar Museum features exhibits on early explorers, seal hunters, and life in the Arctic.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Reindeer Sledding & Sami Culture</h2>
+    <button class="btn" onclick="toggleDesc('reindeer')">More Info</button>
+    <div class="description" id="reindeer">
+      Experience a magical ride through snowy forests with reindeer sledding. Learn about indigenous Sami traditions, enjoy a warm meal in a lavvu, and hear traditional joik songs.
+    </div>
+  </div>
+
+  <script>
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

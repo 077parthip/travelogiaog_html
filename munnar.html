@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Munnar</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 40px;
+      color: #2e3d27;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1b5e20;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    }
+
+    .destination {
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px auto;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .destination h2 {
+      margin: 0 0 10px;
+      color: #2e7d32;
+    }
+
+    .btn {
+      background-color: #388e3c;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .description {
+      display: none;
+      margin-top: 15px;
+      background: #c8e6c9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌿 Explore Munnar, Kerala</h1>
+
+  <div class="destination">
+    <h2>Tea Gardens</h2>
+    <button class="btn" onclick="toggleDesc('tea')">More Info</button>
+    <div class="description" id="tea">
+      Munnar is famous for its endless tea plantations. You can walk through the lush greenery, visit tea museums, and see how tea is processed.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Mattupetty Dam</h2>
+    <button class="btn" onclick="toggleDesc('dam')">More Info</button>
+    <div class="description" id="dam">
+      A beautiful dam surrounded by hills, Mattupetty is known for its scenic views, boating, and the nearby dairy farm run by Indo-Swiss project.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Eravikulam National Park</h2>
+    <button class="btn" onclick="toggleDesc('park')">More Info</button>
+    <div class="description" id="park">
+      Home to the endangered Nilgiri Tahr, this park offers spectacular views of rolling hills, blooming Neelakurinji (once every 12 years), and hiking trails.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Top Station</h2>
+    <button class="btn" onclick="toggleDesc('topstation')">More Info</button>
+    <div class="description" id="topstation">
+      Top Station offers panoramic views of the Western Ghats and the valley below. It’s a great spot for sunrise and photography.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Echo Point</h2>
+    <button class="btn" onclick="toggleDesc('echo')">More Info</button>
+    <div class="description" id="echo">
+      As the name suggests, Echo Point is where your voice bounces off the surrounding hills. It’s a fun stop with a misty lake and souvenir shops.
+    </div>
+  </div>
+
+  <script>
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

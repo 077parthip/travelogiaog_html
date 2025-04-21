@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Zermatt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 40px;
+      color: #1b2631;
+    }
+
+    h1 {
+      text-align: center;
+      color: #154360;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 4px rgba(255,255,255,0.9);
+    }
+
+    .destination {
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px auto;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .destination h2 {
+      margin: 0 0 10px;
+      color: #1a5276;
+    }
+
+    .btn {
+      background-color: #154360;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .description {
+      display: none;
+      margin-top: 15px;
+      background: #d6eaf8;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .destination {
+        padding: 14px 8px;
+        max-width: 98vw;
+      }
+      .btn {
+        width: 100%;
+        font-size: 1rem;
+      }
+      .description {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏔️ Discover Zermatt, Switzerland</h1>
+
+  <div class="destination">
+    <h2>Matterhorn Mountain</h2>
+    <button class="btn" onclick="toggleDesc('matterhorn')">More Info</button>
+    <div class="description" id="matterhorn">
+      The iconic Matterhorn is one of the most recognizable peaks in the Alps. A must-see for visitors, it's great for skiing, photography, and scenic cable car rides.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Gornergrat Railway</h2>
+    <button class="btn" onclick="toggleDesc('gornergrat')">More Info</button>
+    <div class="description" id="gornergrat">
+      Ride Europe’s highest open-air railway to stunning panoramic views of the Matterhorn and surrounding peaks. The journey itself is breathtaking during the snowy season.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Sunnegga Paradise</h2>
+    <button class="btn" onclick="toggleDesc('sunnegga')">More Info</button>
+    <div class="description" id="sunnegga">
+      A family-friendly ski and hiking area accessible by a funicular railway. It offers sunny slopes, cozy chalets, and magnificent mountain views.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Glacier Paradise (Klein Matterhorn)</h2>
+    <button class="btn" onclick="toggleDesc('glacier')">More Info</button>
+    <div class="description" id="glacier">
+      Take a cable car to the highest cable car station in Europe! Enjoy year-round snow, ice sculptures in the glacier palace, and panoramic Alpine views.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Historic Zermatt Village</h2>
+    <button class="btn" onclick="toggleDesc('village')">More Info</button>
+    <div class="description" id="village">
+      Wander the charming car-free streets of Zermatt, filled with alpine houses, boutique shops, and cafes. It's the perfect place to relax and enjoy Swiss hospitality.
+    </div>
+  </div>
+
+  <script>
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

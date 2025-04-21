@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Coorg</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 40px;
+      color: #2e3d27;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1b5e20;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    }
+
+    .destination {
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px auto;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .destination h2 {
+      margin: 0 0 10px;
+      color: #2e7d32;
+    }
+
+    .btn {
+      background-color: #388e3c;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .description {
+      display: none;
+      margin-top: 15px;
+      background: #c8e6c9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍃 Explore Coorg, Karnataka</h1>
+
+  <div class="destination">
+    <h2>Abbey Falls</h2>
+    <button class="btn" onclick="toggleDesc('abbey')">More Info</button>
+    <div class="description" id="abbey">
+      Abbey Falls is a scenic waterfall nestled amidst coffee plantations. The water cascades down from a height of 70 feet, creating a mesmerizing view, especially during the monsoon season.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Raja's Seat</h2>
+    <button class="btn" onclick="toggleDesc('rajasseat')">More Info</button>
+    <div class="description" id="rajasseat">
+      Raja's Seat offers a panoramic view of the mist-covered hills and valleys of Coorg. This scenic garden was a favorite spot of Kodagu kings and is now a perfect place for sunsets and relaxation.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Dubare Elephant Camp</h2>
+    <button class="btn" onclick="toggleDesc('dubare')">More Info</button>
+    <div class="description" id="dubare">
+      Located on the banks of the River Cauvery, Dubare Elephant Camp offers a unique experience where visitors can interact with elephants—feeding, bathing, and even going on short rides.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Talacauvery</h2>
+    <button class="btn" onclick="toggleDesc('talacauvery')">More Info</button>
+    <div class="description" id="talacauvery">
+      Talacauvery is the origin of the sacred River Cauvery, nestled in the Brahmagiri hills. It is also a popular pilgrimage site, surrounded by serene landscapes and spiritual ambiance.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Namdroling Monastery</h2>
+    <button class="btn" onclick="toggleDesc('monastery')">More Info</button>
+    <div class="description" id="monastery">
+      Also known as the Golden Temple, Namdroling Monastery is a stunning Tibetan Buddhist monastery with golden roofs, intricate artwork, and a peaceful atmosphere.
+    </div>
+  </div>
+
+  <script>
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

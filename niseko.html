@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Niseko Winter Escapes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 40px;
+      color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 10px #000;
+    }
+
+    .destination {
+      background: rgba(0, 0, 0, 0.6);
+      margin: 20px auto;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .destination h2 {
+      margin: 0 0 10px;
+      color: #ffccbc;
+    }
+
+    .btn {
+      background-color: #ff7043;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .description {
+      display: none;
+      margin-top: 15px;
+      background: #37474f;
+      padding: 15px;
+      border-radius: 8px;
+      color: #eceff1;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 1.5rem;
+        padding: 10px 0;
+      }
+      .destination {
+        padding: 15px 10px;
+        max-width: 100%;
+        margin: 15px 0;
+      }
+      .btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px 0;
+      }
+      .description {
+        font-size: 0.98rem;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏂 Explore Niseko, Japan</h1>
+
+  <div class="destination">
+    <h2>Grand Hirafu Ski Resort</h2>
+    <button class="btn" onclick="toggleDesc('hirafu')">More Info</button>
+    <div class="description" id="hirafu"></div>
+      Grand Hirafu is Niseko’s most famous ski area, offering a wide range of slopes for all levels, vibrant nightlife, and incredible views of Mount Yotei. It's perfect for both beginners and experts.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Mount Yotei Viewpoints</h2>
+    <button class="btn" onclick="toggleDesc('yotei')">More Info</button>
+    <div class="description" id="yotei">
+      Often called the “Mount Fuji of Hokkaido,” Mount Yotei dominates the landscape and provides stunning photo opportunities during your winter stay in Niseko.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Niseko Village</h2>
+    <button class="btn" onclick="toggleDesc('village')">More Info</button>
+    <div class="description" id="village"></div>
+      Niseko Village is a premium resort area with luxurious accommodations, hot springs, shopping, and direct access to the slopes. It's ideal for a cozy, upscale winter getaway.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Onsen Hot Springs</h2>
+    <button class="btn" onclick="toggleDesc('onsen')">More Info</button>
+    <div class="description" id="onsen">
+      After a chilly day on the slopes, relax in a traditional Japanese onsen. Niseko’s natural hot springs offer a peaceful way to unwind while soaking in warm waters under snowy skies.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Night Skiing</h2>
+    <button class="btn" onclick="toggleDesc('night')">More Info</button>
+    <div class="description" id="night">
+      Experience the thrill of skiing under the stars. Niseko is famous for its well-lit night slopes, giving visitors a unique and magical experience of skiing in the moonlight.
+    </div>
+  </div>
+
+  <script>
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

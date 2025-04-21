@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Kerala Backwaters</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 40px;
+      color: #2e3d27;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00695c;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    }
+
+    .destination {
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px auto;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .destination h2 {
+      margin: 0 0 10px;
+      color: #00796b;
+    }
+
+    .btn {
+      background-color: #004d40;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .description {
+      display: none;
+      margin-top: 15px;
+      background: #b2dfdb;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚤 Explore the Backwaters of Kerala</h1>
+
+  <div class="destination">
+    <h2>Alleppey (Alappuzha)</h2>
+    <button class="btn" onclick="toggleDesc('alleppey')">More Info</button>
+    <div class="description" id="alleppey">
+      Known as the "Venice of the East," Alleppey is the heart of Kerala’s backwater tourism. Cruise through tranquil canals in houseboats, enjoy village life, and witness lush paddy fields and coconut groves.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Kumarakom</h2>
+    <button class="btn" onclick="toggleDesc('kumarakom')">More Info</button>
+    <div class="description" id="kumarakom">
+      Kumarakom is famous for its serene Vembanad Lake and the bird sanctuary nearby. A peaceful houseboat ride through its backwaters offers a relaxing and rejuvenating experience.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Ashtamudi Lake</h2>
+    <button class="btn" onclick="toggleDesc('ashtamudi')">More Info</button>
+    <div class="description" id="ashtamudi">
+      Ashtamudi is one of the deepest and largest lakes in Kerala. A gateway to the backwaters, it's ideal for long cruises and exploring Kollam’s traditional culture.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Munroe Island</h2>
+    <button class="btn" onclick="toggleDesc('munroe')">More Info</button>
+    <div class="description" id="munroe">
+      A hidden gem near Kollam, Munroe Island is an archipelago of 8 islands. It's known for canoe tours, coir-making demonstrations, and peaceful rural backwater settings.
+    </div>
+  </div>
+
+  <div class="destination">
+    <h2>Pathiramanal Island</h2>
+    <button class="btn" onclick="toggleDesc('pathiramanal')">More Info</button>
+    <div class="description" id="pathiramanal">
+      A small, lush island on Vembanad Lake accessible only by boat, Pathiramanal is a haven for birdwatchers and nature lovers seeking quiet, scenic views of the backwaters.
+    </div>
+  </div>
+
+  <script>
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
